@@ -74,7 +74,7 @@ print_header "DISK USAGE"
 # `df -hP` gives human-readable sizes in a stable (POSIX) column layout.
 # We skip the header (NR>1) and skip pseudo-filesystems (tmpfs, udev, loop).
 printf "%-25s %-8s %-8s\n" "MOUNT" "USED%" "STATUS"
-df -hP | awk 'NR>1' | while read -r fs size used avail pct mount; do
+df -hP | awk 'NR>1' | while read -r fs _ _ _ pct pct mount; do
     # Skip virtual / snap filesystems that aren't interesting here.
     case "$fs" in
         tmpfs|udev|/dev/loop*) continue ;;
