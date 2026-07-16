@@ -19,9 +19,9 @@ set -euo pipefail
 
 # --- Configurable thresholds (percent) -------------------------------------
 # Anything at or above these values gets flagged with a [WARN] marker.
-DISK_THRESHOLD=80
-MEM_THRESHOLD=80
-LOAD_THRESHOLD=2.0   # load average per core; >1.0 per core means fully busy
+DISK_THRESHOLD="${DISK_THRESHOLD:-80}"
+MEM_THRESHOLD="${MEM_THRESHOLD:-80}"
+LOAD_THRESHOLD="${LOAD_THRESHOLD:-2.0}"   # load average per core; >1.0 per core means fully busy
 
 # --- Small helpers ---------------------------------------------------------
 # Print a section header so the output is easy to scan.
