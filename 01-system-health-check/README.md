@@ -62,6 +62,9 @@ MOUNT                     USED%    STATUS
 
 Report complete.
 ```
+## Demo for a running Docker container
+
+![demo](health_check_docker.gif)
 
 ## Notes
 
